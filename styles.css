@@ -1,0 +1,115 @@
+/* Styles for the canvas */
+#canvas {
+    width: calc(100vw - 20px); /* Adjust margin */
+    height: calc(100vh - 20px); /* Adjust margin */
+    margin: 10px;
+    /*border: 1px solid #ccc; */
+    border: 2px solid black;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  /* Styles for the color wheel */
+  #color-wheel {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: absolute;
+    bottom: 20px; /* Adjust position */
+    left: 20px; /* Adjust position */
+    width: 150px;
+    height: 100px;
+  }
+  
+  .color {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+  }
+  
+  #guess {
+    top: 20px; /* Adjust position */
+    left: 20px; /* Adjust position */
+    max-width: 50%;
+    display: flex;
+    z-index: 3;
+    position: absolute;
+  }
+
+  #message{
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+
+  #connected-users{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    pointer-events: none;
+    max-height: 150px;
+    overflow: scroll;
+    z-index: 2;
+  }
+  
+  /* Styles for the chat message container */
+  #chat-messages {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow-y: scroll;
+    max-height: 400px;
+    height: auto;
+  }
+
+  #chat-messages .me
+  {
+    min-width: 100px;
+    width: 80%;
+    max-width: 300px;
+    margin-right: 0;
+    margin-left: auto;
+    text-align: end;
+    margin: 10px;
+  }
+
+  #chat-messages .other
+  {
+    min-width: 100px;
+    width: 80%;
+    max-width: 300px;
+    margin-left: 0;
+    margin-right: auto;
+    background-color: pink;
+    margin: 10px;
+  }
+  
+  /* Styles for the chat, guess, and message input fields */
+  #chat-input, #guess-input, #message-input {
+    width: calc(100% - 80px);
+    margin-right: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Styles for the send and guess buttons */
+  #send-button, #guess-button, #message-button {
+    width: 70px;
+    padding: 8px;
+    border: none;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Hover effect for buttons */
+  #send-button:hover, #guess-button:hover, #message-button:hover {
+    background-color: #0056b3;
+  }
+  
